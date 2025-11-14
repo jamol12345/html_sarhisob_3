@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Formalar — Mini Sayt</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", Arial, sans-serif;
+        background: #f7f8fc;
+        color: #1f2937;
+        line-height: 1.6;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #f9d19e, #f6b978);
+        color: #000;
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .section {
+        background: white;
+        padding: 25px;
+        margin-bottom: 30px;
+        border-radius: 14px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .section h2 {
+        margin-top: 0;
+        font-size: 20px;
+        color: #111827;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    textarea { resize: vertical; }
+
+    fieldset {
+        border: 1px solid #cbd5e1;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    legend {
+        padding: 0 8px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .info-box {
+        background: #fff7ed;
+        border-left: 5px solid #f59e0b;
+        padding: 14px;
+        margin-top: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 18px;
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.2s ease;
+    }
+
+    button:hover { background: #1d4ed8; }
+</style>
+
+</head>
+<body>
+
+<header>
+    HTML Formalar — Asosiy Teglar va Atributlar
+</header>
+
+<div class="container">
+
+    <!-- SECTION 1 -->
+    <div class="section">
+        <h2>1. Formaning asosiy teglar: form, fieldset, legend, label, input</h2>
+
+        <form>
+            <fieldset>
+                <legend>Shaxsiy ma’lumotlar</legend>
+
+                <label for="name">Ism:</label>
+                <input id="name" type="text" placeholder="Ismingizni kiriting">
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="email@example.com">
+
+                <label for="age">Yosh:</label>
+                <input id="age" type="number" min="1" max="100" placeholder="Yoshingiz">
+            </fieldset>
+
+            <button type="submit">Yuborish</button>
+        </form>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section">
+        <h2>2. Input va uning barcha type qiymatlari</h2>
+
+        <label>Matn:</label>
+        <input type="text" placeholder="Oddiy matn">
+
+        <label>Telefon (tel):</label>
+        <input type="tel" placeholder="+998 ..." inputmode="tel">
+
+        <label>Email:</label>
+        <input type="email" placeholder="example@mail.com" autocomplete="email">
+
+        <label>Parol:</label>
+        <input type="password" placeholder="Parolingiz">
+
+        <label>Search:</label>
+        <input type="search" placeholder="Qidiring...">
+
+        <label>URL:</label>
+        <input type="url" placeholder="https://sayt.uz">
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section">
+        <h2>3. Atributlar: required, disabled, readonly, placeholder, inputmode, autocomplete</h2>
+
+        <label>Majburiy maydon (required):</label>
+        <input type="text" placeholder="Majburiy" required>
+
+        <label>O‘qib bo‘ladi, lekin yozib bo‘lmaydi (readonly):</label>
+        <input type="text" value="Faqat o‘qish mumkin" readonly>
+
+        <label>O‘chirib qo‘yilgan (disabled):</label>
+        <input type="text" value="Bu yozib bo‘lmaydi" disabled>
+
+        <label>Telefon uchun inputmode:</label>
+        <input type="text" placeholder="+998 ..." inputmode="numeric">
+
+        <label>Autocomplete yoqilgan email:</label>
+        <input type="email" autocomplete="on" placeholder="Email">
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section">
+        <h2>4. Textarea, select, option, optgroup</h2>
+
+        <label for="message">Izoh (textarea):</label>
+        <textarea id="message" rows="4" placeholder="Izoh yozing..."></textarea>
+
+        <label for="city">Shaharni tanlang:</label>
+        <select id="city">
+            <option value="">Shahar tanlang</option>
+            <option>Toshkent</option>
+            <option>Andijon</option>
+            <option>Buxoro</option>
+        </select>
+
+        <label>Kurs yo‘nalishi:</label>
+        <select>
+            <optgroup label="Frontend">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JavaScript</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option>Node.js</option>
+                <option>Python</option>
+                <option>PHP</option>
+            </optgroup>
+        </select>
+    </div>
+
+</div>
+
+</body>
+</html>
